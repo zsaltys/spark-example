@@ -7,7 +7,8 @@ object SparkSessionTest {
   def main(args:Array[String]): Unit ={
 
     val spark = SparkSession.builder()
-      .master("local[1]")
+      // uncomment if you want to run this locally
+      //.master("local[1]")
       .appName("SparkByExample")
       .getOrCreate();
     
@@ -17,7 +18,7 @@ object SparkSessionTest {
     println("Master:" + spark.sparkContext.master);
 
     val sparkSession2 = SparkSession.builder()
-      .master("local[1]")
+      //.master("local[1]")
       .appName("SparkByExample-test")
       .getOrCreate();
 
